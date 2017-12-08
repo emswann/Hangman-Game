@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!-- HTML file to execute the Hangman game.
+  
+     NAME: index.html
+     AUTHOR: Elaina Swann
+     DATE: 12/09/2017
+     REVISION LOG:
+-->
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Hangman Game" />
+  <meta name="keywords" content="Hangman, Game" />
+  <meta name="author" content="Elaina Swann" />
+
+  <title>Hangman Game</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Link to selected google fonts. -->
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans" rel="stylesheet">
+
+  <!-- Link to customized stylesheet for Hangman game. -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+</head>
+
+<body>
+
+  <!-- Webpage contents -->
+  <div class="container">
+
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center" id="title">HANGMAN</h1>
+        </div>
+      </div> <!-- hangman title row -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <img src="assets/images/Hangman.jpg" class="img-responsive img-thumbnail" alt="Hangman image" />
+        </div>
+        <div class="col-md-6">
+          <h3>PRESS ANY LETTER TO GET STARTED!</h3>
+        </div>
+      </div> <!-- start game notification row -->
+    </div> <!-- jumbtron -->
+
+    <div class="panel">
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center">WINS:&nbsp
+                <span id="wins"></span>
+              </h3>
+            </div>
+          </div> <!-- wins -->
+
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center">LOSSES:&nbsp
+                <span id="losses"></span>
+              </h3>
+            </div>
+          </div> <!-- losses -->
+
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center">NUMBER OF GUESSES REMAINING:&nbsp
+                <span id="guesses-left"></span>
+              </h3>
+            </div>
+          </div> <!-- guesses remaining -->
+
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center">LETTERS ALREADY GUESSED:<br />
+                <span id="letters-guessed"></span><br /><br />
+              </h3>
+            </div>
+          </div> <!-- letters guessed -->
+
+          <div class="row" id="display-result">
+            <div class="col-md-12">
+              <h3 class="text-center"><strong>
+                <span id="result"></span></strong>
+              </h3>
+            </div>
+          </div>
+        </div> <!-- game information/totals column -->
+
+        <div class="col-md-7 col-md-offset-1">
+          <div class="container-fluid" id="hangman-container">
+            <span id="hangman-progress"></span>
+                                           
+            <h3 id="user-guess-label">CURRENT WORD:&nbsp
+              <span id="user-guess"></span>
+            </h3>
+          </div>
+        </div> <!-- hangman container column-->
+
+      </div> <!-- panel row -->
+
+    </div> <!-- panel -->
+
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+
+  <!-- Custom JavaScript code to implement Hangman game -->
+  <script 
+    type="application/javascript" src="assets/javascript/game.js">
+  </script>
+
+</body>
+
+</html>
